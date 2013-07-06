@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 9, 2013 7:51:18 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.ng.search.data.Keywordlist" table="keywordlist" catalog="test">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="searchKey" type="string">
+            <column name="search_key" length="50" not-null="true" unique="true" />
+        </property>
+        <property name="keyCount" type="int">
+            <column name="key_count" not-null="true" />
+        </property>
+        <property name="searchDate" type="timestamp">
+            <column name="search_date" length="0" not-null="true" />
+        </property>
+        <property name="isCrawled" type="byte">
+            <column name="isCrawled" not-null="true" />
+        </property>
+        <property name="crawlDate" type="timestamp">
+            <column name="crawlDate" length="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

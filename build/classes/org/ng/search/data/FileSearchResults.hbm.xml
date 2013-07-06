@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 9, 2013 7:51:18 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="org.ng.search.data.FileSearchResults" table="file_search_results" catalog="test">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="200" not-null="true" />
+        </property>
+        <property name="extension" type="string">
+            <column name="extension" length="11" not-null="true" />
+        </property>
+        <property name="desc" type="string">
+            <column name="description" length="65535" not-null="true" />
+        </property>
+        <property name="size" type="string">
+            <column name="size" length="11" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="500" not-null="true" />
+        </property>
+        <property name="added" type="timestamp">
+            <column name="added" length="0" not-null="true" />
+        </property>
+        <property name="related" type="string">
+            <column name="related" length="300" not-null="true" />
+        </property>
+        <property name="searchkey" type="string">
+            <column name="searchkey" length="200" not-null="true" />
+        </property>
+        <property name="resulturl" type="string">
+            <column name="resulturl" length="200" not-null="true" />
+        </property>
+        <property name="date" type="timestamp">
+            <column name="date" length="0" not-null="true" />
+        </property>
+        <property name="resultfrom" type="int">
+            <column name="resultfrom" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
